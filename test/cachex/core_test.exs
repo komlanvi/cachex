@@ -30,7 +30,9 @@ defmodule Cachex.CoreTest do
     assert five_value.access == 1
   end
 
-  test "post(cache, key, number) add %Value{access: 0, number: 0} at key in cache", %{cache: cache} do
+  test "post(cache, key, number) add %Value{access: 0, number: 0} at key in cache", %{
+    cache: cache
+  } do
     # in the first place, key four does not exist in cache
     assert Map.get(cache, :four) == nil
     num = 44

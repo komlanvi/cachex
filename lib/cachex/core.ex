@@ -9,9 +9,9 @@ defmodule Cachex.Core do
     case Map.get(cache, key) do
       nil ->
         random_val = Enum.random(1..100)
-#        value = %Value{number: random_val, access: 1}
-#        new_cache = Map.put(cache, key, value)
-#        {new_cache, value}
+        #        value = %Value{number: random_val, access: 1}
+        #        new_cache = Map.put(cache, key, value)
+        #        {new_cache, value}
 
         updated_cache = put(cache, key, random_val)
         get(updated_cache, key)

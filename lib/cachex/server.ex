@@ -17,6 +17,7 @@ defmodule Cachex.Server do
         send pid, {:number, value.number}
 
         new_cache_db
+
       {:put, {_, key, num}} ->
         Core.put(cache_db, key, num)
 
