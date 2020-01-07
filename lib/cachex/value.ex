@@ -5,6 +5,8 @@ defmodule Cachex.Value do
   access - the number of time it was accessed in the cache db
   """
 
+  @type t :: %__MODULE__{number: integer(), access: integer()}
+
   @enforce_keys [:number]
   defstruct [:number, access: 0]
 end

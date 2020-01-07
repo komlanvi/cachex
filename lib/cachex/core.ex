@@ -5,6 +5,7 @@ defmodule Cachex.Core do
 
   alias Cachex.Value
 
+  @spec get(map(), atom()) :: {map(), Cachex.Value.t()}
   def get(cache, key) do
     case Map.get(cache, key) do
       nil ->
@@ -31,6 +32,7 @@ defmodule Cachex.Core do
     end
   end
 
+  @spec put(map(), atom(), integer()) :: map()
   def put(cache, key, number) do
     Map.put(cache, key, %Value{number: number, access: 0})
   end
